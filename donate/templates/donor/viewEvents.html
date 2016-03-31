@@ -19,64 +19,37 @@
  			</div>
   			<div class="col-sm-4">
   				<center><h1><p>
-  				<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Setting</button></a>
+  				<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Settings</button></a>
   				<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
   				</p></h1></center>
   			</div>
   		</div>
 
   		<div class="row">
-  			
+  			{% for event in events %}
   			<div class="event">
   				<div class="row">
   					<div class="col-sm-offset-0 col-sm-4">
   						<div class="head">
-							Event Name
+							{{event.name}}
 						</div>
   					</div>
   					<div class="col-sm-4">
   						<div class="desc">
-  							We have different views for different users - Donor, Volunteer, NGO Donors can donate items, view heir previous donated history, register as a volunteer, view list of NGOs registered and their events.
-							NGOs can view the list of donated items, create events and charity drives and request for volunteers.
-							Volunteers ensure that the item donated is delivered to the NGO and help organise an event with an NGO.
+  							{{event.description}}
   						</div>
   					</div>
   					<div class="col-sm-4">
   						<div class="loc">
-							Time : <br/>
-							Venue :<br/>
-							Type :<br/>
-							Contact :<br/>
+							Time : {{event.time}}<br/>
+							Venue :{{event.location}}<br/>
+							Type :{{event.type}}<br/>
+							Contact :{{event.ngo.phone}} ({{event.ngo.user.first_name}})<br/>
 						  </div>
   					</div>
   				</div>
   			</div>
-
-  			<div class="event">
-  				<div class="row">  				
-  					<div class="col-sm-offset-0 col-sm-4">
-  						<div class="head">
-							Event Name
-						</div>
-  					</div>
-  					<div class="col-sm-4">
-  						<div class="desc">
-  							We have different views for different users - Donor, Volunteer, NGO Donors can donate items, view heir previous donated history, register as a volunteer, view list of NGOs registered and their events.
-							NGOs can view the list of donated items, create events and charity drives and request for volunteers.
-							Volunteers ensure that the item donated is delivered to the NGO and help organise an event with an NGO.
-  						</div>
-  					</div>
-  					<div class="col-sm-4">
-  						<div class="loc">
-							Time : <br/>
-							Venue :<br/>
-							Type :<br/>
-							Contact :<br/>
-						  </div>
-  					</div>
-  				</div>
-  			</div>
-
+				{% endfor %}
   		</div>
 
   	</div>

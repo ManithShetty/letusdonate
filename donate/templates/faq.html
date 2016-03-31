@@ -15,7 +15,15 @@
 <div class="container-fluid">
 	<div class="row" style="background-image: url('../static/img/front.jpg'); padding: 20px">
  		<div class="col-sm-8"><center><a href="{% url 'dashboard' %}"><img src="../static/img/Untitled.png" alt="Logo" id="logo" style="width:424px;height:84px;"></a></center></div>
-  		<div class="col-sm-3">
+  	{% if logged_in %}
+    <div class="col-sm-4">
+  				<center><h1><p>
+  				<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Settings</button></a>
+  				<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
+  				</p></h1></center>
+  			</div>
+    {% else %}
+    <div class="col-sm-4">
         <center>
           <h1>
             <p>
@@ -29,6 +37,7 @@
           </h1>
         </center>
       </div>
+    {% endif %}
 	</div>
 
 </div>

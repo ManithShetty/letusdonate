@@ -19,16 +19,30 @@
     </div>
   	<div class="col-sm-4">
   		<center><h1><p>  
-  			<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Setting</button></a>
+  			<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Settings</button></a>
   			<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
   		</p></h1></center>
   	</div>
 	</div>
-  <h2><b>Item list</b></h2>
+  <div class="row" style="padding-top: 50px">
+      <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-4" id="createad">
+                   <a href="{}"><img src="../../static/img/event.png" class="img-circle" alt="Cinque Terre" width="156" height="156" /></a>
+              </div>
+              <div class="col-sm-2">
+                   <a href="{}"><img src="../../static/img/view-items.png" class="img-circle" alt="Cinque Terre" width="156" height="156" /></a>
+              </div>
+              
+              
+            </div>
+      </div>
+    </div>  
+  <center><h2><b>Item list</b></h2></center>
   <form>
-  <button type="submit" class="btn btn-success btn-sm">Collected</button>
+  <center><button type="submit" class="btn btn-success btn-sm">Collected</button></center>
   <div class="row" id="volunteer">  
-   <div class="col-sm-10">
+   <div class="col-sm-10 col-sm-offset-1">
    <table class="table">
     <thead>
       <tr>
@@ -60,9 +74,41 @@
       </tr>
     </tbody>
    </table>
-  </div>          
- </form>
+  </div>      
 </div>
-</div>
+</form>
+<div class="row" style="background-image: url('../../static/img/front.jpg'); padding: 20px;">
+      <div class="col-sm-2 col-sm-offset-2">
+        <center><h1>
+            <p>           
+              <a href="{% url 'about' %}">
+                <button type="button" class="btn btn-primary btn-lg">About</button>
+              </a>
+            </p>
+          </h1></center>
+      </div>
+      <div class="col-sm-4">
+        
+          <center><h1>
+            <p>           
+              <a href="{% url 'faq' %}">
+                <button type="button" class="btn btn-primary btn-lg">FAQ</button>
+              </a>
+            </p>
+          </h1></center>
+        
+      </div>
+      <div class="col-sm-2">
+        
+        <center><h1>
+            <p>           
+              <a href="{% url 'contact_us_view' %}">
+                <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+              </a>
+            </p>
+          </h1></center>
+        
+      </div>
+    </div>
 </body>
 </html>

@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../../static/css/donor.css">
-  <!--<link rel="stylesheet" type="text/css" href="../../static/css/spacing.css">-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
@@ -19,13 +18,13 @@
     </div>
   	<div class="col-sm-4">
   		<center><h1><p>  
-  			<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Setting</button></a>
+  			<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Settings</button></a>
   			<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
   		</p></h1></center>
   	</div>
 	</div>
 
-  <div class="row" style="padding-top: 60px">
+  <div class="row" style="padding-top: 60px;padding-bottom: 60px">
     <div class="col-sm-9">
       <div class="row">
         <div class="col-sm-4 col-sm-offset-2" id="createad">
@@ -57,7 +56,36 @@
       
     </div>
   </div>
-
+<div class="row" style="background-image: url('../../static/img/front.jpg'); padding: 20px;">
+      <div class="col-sm-2 col-sm-offset-2">
+        <center><h1>
+            <p>           
+              <a href="{% url 'about' %}">
+                <button type="button" class="btn btn-primary btn-lg">About</button>
+              </a>
+            </p>
+          </h1></center>
+      </div>
+      <div class="col-sm-4">
+          <center><h1>
+            <p>           
+              <a href="{% url 'faq' %}">
+                <button type="button" class="btn btn-primary btn-lg">FAQ</button>
+              </a>
+            </p>
+          </h1></center>
+      </div>
+      <div class="col-sm-2">
+        <center><h1>
+            <p>           
+              <a href="{% url 'contact_us_view' %}">
+                <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+              </a>
+            </p>
+          </h1></center>
+        
+      </div>
+    </div>
 </div>
 
 	

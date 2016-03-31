@@ -17,13 +17,6 @@ class Donor(models.Model):
         return self.user.username
 
 
-class Admin(models.Model):
-    user = models.OneToOneField(User, related_name='admin')
-    address = models.CharField(max_length=100)
-    pincode = models.IntegerField(default=0)
-    phone = models.BigIntegerField(default=0)
-
-
 class NGO(models.Model):
     user = models.OneToOneField(User, related_name='ngo')
     address = models.CharField(max_length=100)

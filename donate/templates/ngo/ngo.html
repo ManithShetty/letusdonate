@@ -20,7 +20,7 @@
   			<div class="col-sm-4">
   				<center><h1><p>
       		
-  				<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Setting</button></a>
+  				<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Settings</button></a>
   				<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
   				</p></h1></center>
   			</div>
@@ -28,24 +28,21 @@
 		<div class="row" style="padding-top: 50px">
 			<div class="col-sm-12">
       			<div class="row">
-        			<div class="col-sm-2 col-sm-offset-2" id="createad">
+        			<div class="col-sm-2 col-sm-offset-3" id="createad">
            				 <a href="{% url 'create_event_view' %}"><img src="../../static/img/create-events.png" class="img-circle" alt="Cinque Terre" width="156" height="156" /></a>
         			</div>
         			<div class="col-sm-2">
            				 <a href="{% url 'edit_req_view' %}"><img src="../../static/img/edit-req.png" class="img-circle" alt="Cinque Terre" width="156" height="156" /></a>
        				</div>
-       				<div class="col-sm-2" id="createad">
-           				 <a href="{%  %}"><img src="../../static/img/view-items.png" class="img-circle" alt="Cinque Terre" width="156" height="156" /></a>
+       				<div class="col-sm-2" id="view_items">
+           				 <a href="{% url 'view_items' %}"><img src="../../static/img/view-items.png" class="img-circle" alt="Cinque Terre" width="156" height="156" /></a>
         			</div>
-        			<div class="col-sm-2" id="createad">
-           				 <a href="{% url 'req_vol_view' %}"><img src="../../static/img/req-vol.png" class="img-circle" alt="Cinque Terre" width="156" height="156" onclick="reqVolunteers()" /></a>
-        			</div>
-          		</div>
+						</div>
         	</div>
         </div>	
 		
 		<div class="row" style="padding-top: 50px">
-		    <center><h2><b>Organization details</b></h3></center>
+		    <center><h2><b>Organization details</b></h2></center>
 			<div class="col-sm-offset-1 col-sm-3" style="padding: 25px">
 				<img src="../../static/img/cheshire-home.jpg" class="img-circle" alt="NGO_Image" width="400" height="300" />
 			</div>
@@ -55,12 +52,39 @@
 				</p>
 			</div>
 		</div>
+		<div class="row" style="background-image: url('../../static/img/front.jpg'); padding: 20px;">
+      <div class="col-sm-2 col-sm-offset-2">
+        <center><h1>
+            <p>           
+              <a href="{% url 'about' %}">
+                <button type="button" class="btn btn-primary btn-lg">About</button>
+              </a>
+            </p>
+          </h1></center>
+      </div>
+      <div class="col-sm-4">
+        
+          <center><h1>
+            <p>           
+              <a href="{% url 'faq' %}">
+                <button type="button" class="btn btn-primary btn-lg">FAQ</button>
+              </a>
+            </p>
+          </h1></center>
+        
+      </div>
+
+      <div class="col-sm-2">
+        <center><h1>
+            <p>           
+              <a href="{% url 'contact_us_view' %}">
+                <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+              </a>
+            </p>
+          </h1></center>
+      </div>
+    </div>
 	</div>
 
-	<script type="text/javascript">
-		function reqVolunteers(){
-			window.alert('Requests have been sent.');
-		}
-	</script>
 </body>
 </html>

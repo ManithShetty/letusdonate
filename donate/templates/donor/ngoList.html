@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Create an Event</title>
+	<title>Letusdonate</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -14,11 +14,11 @@
 	<div class="container-fluid">
 		<div class="row" style="background-image: url('../../static/img/front.jpg'); padding: 20px">
  			<div class="col-sm-8">
- 				<center><a href="donor.html"><img src="../../static/img/Untitled.png" alt="Logo" id="logo" style="width:424px;height:84px;"></a></center>
+ 				<center><a href="{% url 'dashboard' %}"><img src="../../static/img/Untitled.png" alt="Logo" id="logo" style="width:424px;height:84px;"></a></center>
  			</div>
   			<div class="col-sm-4">
   				<center><h1><p>
-  				<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Setting</button></a>
+  				<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Settings</button></a>
   				<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
   				</p></h1></center>
   			</div>

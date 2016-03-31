@@ -17,7 +17,15 @@
     <div class="col-sm-8">
       <center><a href="{% url 'home' %}"><img src="../static/img/Untitled.png" alt="Logo" id="logo" style="width:424px;height:84px;"></a></center>
     </div>
-    <div class="col-sm-3">
+    {% if logged_in %}
+    <div class="col-sm-4">
+  				<center><h1><p>
+  				<a href="{% url 'settings_view' %}"><button type="button" class="btn btn-primary btn-lg">Settings</button></a>
+  				<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
+  				</p></h1></center>
+  			</div>
+    {% else %}
+    <div class="col-sm-4">
         <center>
           <h1>
             <p>
@@ -31,6 +39,7 @@
           </h1>
         </center>
       </div>
+    {% endif %}
   </div>
   
   <div class="row" style="padding-top: 75px">
@@ -40,7 +49,7 @@
             <strong>Contact Us</strong>
             </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" action="{% url 'register' %}" method="post">
+                    <form class="form-horizontal" role="form" action="{% url 'contact_us' %}" method="post">
                       {% csrf_token %}
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
@@ -57,7 +66,7 @@
                     <div class="form-group">
                   <label for="inputEmail3" class="col-sm-3 control-label">Message</label>
                   <div class="col-sm-9">
-                    <textarea class="form-control" name="description" row="7" placeholder="Enter the message here..." required=""></textarea>
+                    <textarea class="form-control" name="message" row="7" placeholder="Enter the message here..." required=""></textarea>
                   </div>
                 </div>                  
                     <div class="form-group last">
